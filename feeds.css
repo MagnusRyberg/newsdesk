@@ -1,0 +1,30 @@
+/* Include the source-colors.css file */
+@import 'source-colors.css';
+
+/* Apply unique colors to each source using the custom variables */
+.article[data-source="Investopedia"] {
+    border-color: var(--inve-news-color);
+    background-color: #fff020;
+    /* ... Other styles for BBC News */
+}
+
+/* Apply unique colors to each source using the custom variables */
+.article[data-source="BBC News"] {
+    border-color: var(--bbc-news-color);
+    background-color: #E6EFFC;
+    /* ... Other styles for BBC News */
+}
+
+.article[data-source="The Guardian"] {
+    border-color: var(--the-guardian-color);
+    background-color: #E5F0E4;
+    /* ... Other styles for The Guardian */
+}
+
+.article[data-source="CNN"] {
+    border-color: var(--cnn-color);
+    background-color: #FFCCCC;
+    /* ... Other styles for CNN */
+}
+
+/* Add similar styling for other sources */
