@@ -1,0 +1,23 @@
+/* Define custom CSS variables for source colors */
+:root {
+    --bbc-news-color: #357ABD;
+    --the-guardian-color: #50A446;
+    --cnn-color: #D60000;
+    --reuters-color: #3366CC;
+    --techcrunch-color: #F96854;
+    --new-york-times-color: #999999;
+    --al-jazeera-english-color: #CC3333;
+    --reuters-business-color: #3366CC;
+    --washington-post-color: #FF6600;
+    --wall-street-journal-color: #999999;
+    --national-geographic-color: #3C8B3C;
+    --espn-sports-color: #FF6600;
+    --npr-technology-color: #333333;
+    --the-economist-color: #5A85D3;
+    --buzzfeed-news-color: #FF3366;
+    --cbs-news-health-color: #FF6600;
+    --science-daily-color: #990099;
+    --usa-today-politics-color: #3366CC;
+    --techradar-color: #009900;
+    /* Add more custom variables for other sources as needed */
+}
