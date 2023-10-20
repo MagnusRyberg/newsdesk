@@ -1,0 +1,237 @@
+/* Specific styles for each feed source */
+body {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    background-color: #f9f7f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1%;
+    font-size: 24px;
+}
+
+/* Card container */
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Card inner container */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+/* Card front */
+.card-front {
+    width: 100%;
+    height: 100%;
+    background-color: #f9f7f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+/* Card back */
+.card-back {
+    width: 100%;
+    height: 100%;
+    background-color: #0078d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+
+.news-container {
+    margin: 2%;
+    column-count: 5; /* Adjust the number of columns as needed */
+    column-gap: 2%;
+}
+
+.article {
+    min-width: 40%; /* Full width for each article */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 2%;
+    margin: 2% 0;
+    box-shadow: 3px 3px 5px #888888;
+    page-break-inside: avoid;
+    break-inside: avoid; /* Prevent breaking articles across columns */
+    position: relative; /* To control the background */
+}
+
+.article::before {
+    content: attr(data-source);
+    background-color: #333;
+    color: white;
+    padding: 4px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+}
+/* Add a class for clicked articles */
+.article.clicked {
+    background-color: #ddd;
+}
+
+
+.article h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.article p {
+    font-size: 16px;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.article a {
+    text-decoration: none;
+    color: #0078d4;
+}
+
+/* Add newspaper-like styling */
+body::before {
+    content: "";
+    background: url('newspaper-background.jpg'); /* Replace with your own background image */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.header::before,
+.article::before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+}
+
+.header::before {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    opacity: 0.7;
+}
+
+.article::before {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.8;
+}
+
+/* Adjust fonts and spacing to resemble a paperback newspaper */
+h1, h2, h3, h4, p {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+
+/* Individual styling for each feed source */
+/* BBC News */
+.article[data-source="BBC News"] {
+    border-color: var(--bbc-news-color);
+    background-color: var(--bbc-news-color);
+}
+
+.article[data-source="BBC News"]::before {
+    content: "BBC News";
+    background-color: var(--bbc-news-color);
+    color: white;
+    display: block;
+    padding: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* The Guardian */
+.article[data-source="The Guardian"] {
+    border-color: var(--the-guardian-color);
+    background-color: var(--the-guardian-color);
+}
+
+.article[data-source="The Guardian"]::before {
+    content: "The Guardian";
+    background-color: var(--the-guardian-color);
+    color: white;
+    display: block;
+    padding: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ... (CSS rules for other sources) */
+
+/* Apply gray background to visited links */
+.article a:visited {
+    background-color: gray;
+    color: white; /* Change the text color for visited links */
+}
+
+/* Card container */
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Card front */
+.card-front {
+    width: 100%;
+    height: 100%;
+    background-color: #f9f7f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+/* Card back */
+.card-back {
+    width: 100%;
+    height: 100%;
+    background-color: #0078d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.hide {
+    display: none;
+}
